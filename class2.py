@@ -16,4 +16,10 @@ p2 = Person()
 p3 = Person() 
 print("인스턴스 갯수:{0}".format(Person.num_person) )
 
+#새로운 변수 추가
+Person.title = "new title"
+
+print( p1.title )
+print( p2.title )
+print( Person.title )
 
