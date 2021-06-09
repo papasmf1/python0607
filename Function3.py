@@ -44,3 +44,38 @@ print( userURIBuilder("credu.com", "80", id="kim", passwd="1234",
     name="mike", age="30") )
 
 
+#람다함수 
+g = lambda x,y:x*y
+print( g(3,4) )
+print( g(5,6) )
+
+print( (lambda x:x*x)(3) )
+
+#메모리에 있는 변수, 함수 보여달라~
+print( globals() )
+
+#아무것도 하지 않는 키워드
+class Demo:
+    pass 
+
+
+#제너레이터 형태의 함수 정의
+def reverse(data):
+    for index in range(len(data)-1, -1, -1):
+        yield data[index]
+
+#함수 호출
+for char in reverse("gold"):
+    print(char)
+
+#좀 더 단순한 데모 
+def abc():
+    s = "abc"
+    for char in s:
+        #값을 생성하고 추출하고 없으면 반환 
+        yield char 
+
+#호출
+for char in abc():
+    print(char)
+
