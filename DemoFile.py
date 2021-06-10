@@ -10,7 +10,7 @@ print("welcome to", "python", sep="~", end="!", file=sys.stderr)
 #출력을 파일로 방향을 전환
 f = open("c:\\work\\demo.txt", "wt")
 print("file write", file=f)
-f.close()
+#f.close()
 print( f.closed )
 
 #파일에 쓰기, 읽기 
